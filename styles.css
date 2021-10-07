@@ -33,9 +33,9 @@
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
-/* Add a blue background color to navbar links on hover */
+/* Add an orange background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: blue;
+  background-color: #FF5F00;
 }
 
 /* Dropdown content (hidden by default) */
