@@ -20,5 +20,72 @@
         </div>
       </div>
     </div>
+  <div id="projectList"></div>
+    <script>
+        fetch('../projects.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            var mainContainer = document.getElementById("projectList");
+            for (var i = 0; i < data.length; i++) {
+                var div2 = document.createElement("div");
+                div2.className = 'listElement';
+				var image = document.createElement("img");
+				image.src = 'images/' + data[i].image;
+				image.style = 'margin-top:10px;margin-left:10px;height:200px;float:left;'
+				div2.appendChild(image);
+				var div3 = document.createElement("div");
+				div3.style = 'overflow-y:scroll;height:110px;margin-top:0px'
+				var div = document.createElement("div");
+				div.style = 'word-break:keep-all;'
+				var div4 = document.createElement("div");
+				div4.style = 'overflow-y:hidden;height:60px;'
+				var name = document.createElement("p");
+				name.textContent = data[i].name;
+				name.style = 'float:left;margin-left:20px;margin-top:20px;color:white;font-size:30px;font-family:Arial;'
+				div4.appendChild(name);
+				var type = document.createElement("p");
+				type.textContent = data[i].type;
+				type.style = 'float:left;margin-left:20px;margin-top:20px;color:gray;font-size:30px;font-family:Arial;'
+				div4.appendChild(type);
+				var desc = document.createElement("p");
+				desc.textContent = data[i].description;
+				desc.style = 'float:left;margin-left:20px;margin-top:5px;color:gray;font-size:20px;font-family:Arial;clear:left;'
+				div.appendChild(desc);
+				div2.appendChild(div4);
+				div3.appendChild(div);
+				div2.appendChild(div3);
+				var div5 = document.createElement("div");
+				div5.style = 'overflow-y:hidden;height:40px;'
+				var latest = document.createElement("button");
+				latest.textContent = 'Latest'
+				latest.style = 'width:120px;height:30px;margin-left:20px;margin-top:10px;float:left;background-color:#FF5F00;font-weight:bold;font-family:Arial;color:#1B1B1B'
+				latest.type = 'button'
+				latest.onclick = "window.location.href='" + data[i].latestDownload + "';"
+				div5.appendChild(latest);
+				var versions = document.createElement("button");
+				versions.textContent = 'Versions'
+				versions.style = 'width:120px;height:30px;margin-left:20px;margin-top:10px;float:left;background-color:#FF5F00;font-weight:bold;font-family:Arial;color:#1B1B1B'
+				versions.type = 'button'
+				versions.onclick = "window.location.href='" + data[i].id + "/versions/" + "';"
+				div5.appendChild(versions);
+				var project = document.createElement("button");
+				project.textContent = 'Project Page'
+				project.style = 'width:120px;height:30px;margin-left:20px;margin-top:10px;float:left;background-color:#FF5F00;font-weight:bold;font-family:Arial;color:#1B1B1B'
+				project.type = 'button'
+				project.onclick = "window.location.href='" + data[i].id + "/" + "';"
+				div5.appendChild(project);
+				div2.appendChild(div5);
+                mainContainer.appendChild(div2);
+            }
+        }
+    </script>
   </body>
 </html>
