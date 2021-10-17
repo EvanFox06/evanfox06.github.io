@@ -1,0 +1,23 @@
+[
+	{
+		"id": "better-leather-armor",
+		"type": "Resource Pack",
+		"name": "Better Leather Armor",
+		"image": "better-leather-armor.png",
+		"description": "aaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaa aaaaaaaaa aaaaaaaaaaaaa aaaaaaaaa aaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaa aaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaa aaaaaaaa"
+	},
+	{
+		"id": "2",
+		"type": "Data Pack",
+		"name": "Item Decorating",
+		"image": "",
+		"description": ""
+	},
+	{
+		"id": "3",
+		"type": "Data Pack",
+		"name": "Fletching (more arrows)",
+		"image": "",
+		"description": ""
+	}
+]
